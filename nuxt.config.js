@@ -45,6 +45,8 @@ export default {
         solid: [
           'faChevronDown', 
           'faChevronUp', 
+          'faChevronLeft', 
+          'faChevronRight', 
           'faBars',
           'faPlayCircle',
           'faTimes'
