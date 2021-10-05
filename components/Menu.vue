@@ -1,6 +1,6 @@
 <template>
   <div id="menu" class="animate-fadein fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col xl:justify-center pt-10 xl:pt-0 items-center bg-gray-900 hidden">
-    <h1 class="xl:text-8xl text-5xl font-title text-gray-200 uppercase mb-5 xl:mt-16">Explore my Content</h1>
+    <h1 class="xl:text-8xl text-5xl font-title text-gray-200 uppercase mb-5 xl:mt-16">Explore</h1>
     <div class="w-24 h-1 bg-green-400 xl:mb-16"></div>
     <div class="w-4/5 h-full items-center justify-center flex flex-col mb-24">
       <div class="w-full flex xl:flex-row flex-col justify-center xl:mb-16" v-for="row in categories" :key="row.row">
@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div :id="`close-menu`" v-on:click="close()" class="cursor-pointer absolute text-green-400 text-7xl z-50 bottom-10">
+    <div :id="`close-menu`" v-on:click="close()" class="cursor-pointer absolute text-green-400 xl:text-3xl text-xl z-50 bottom-10">
         <fa-icon :icon="['fas','times']" />
     </div>
   </div>
