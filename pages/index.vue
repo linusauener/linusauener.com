@@ -4,6 +4,18 @@
 
 <script>
 export default {
+  methods: {
+    setViewHeight: function() {
+      let vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+  },
+  mounted: function() {
+    this.setViewHeight()
+    window.addEventListener('resize', () => {
+      this.setViewHeight()
+    })
+  },
   async asyncData ({ $content }) {
     const start = await $content('start').fetch()
     const projects = (await $content('projects').fetch()).filter((project) => {
