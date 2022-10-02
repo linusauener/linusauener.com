@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full h-full bg-gray-900 relative overflow-hidden flex flex-col items-center justify-center px-10"
+    class="w-full h-full bg-gray-900 relative overflow-hidden flex flex-col items-center justify-center px-10 md:px-10"
   >
     <img
       :id="`bg-video-${index}`"
@@ -29,6 +29,6 @@ export default {
 
 <style>
 lite-youtube {
-  max-width: 90%;
+  /* max-width: 75%; */
 }
 </style>
