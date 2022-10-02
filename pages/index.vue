@@ -43,11 +43,3 @@ export default {
   }
 };
 </script>
-
-<style>
-@supports (-webkit-touch-callout: none) {
-  .h-screen {
-    height: -webkit-fill-available;
-  }
-}
-</style>

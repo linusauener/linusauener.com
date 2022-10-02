@@ -48,12 +48,12 @@
         class="column flex flex-nowrap w-full h-1/2 xl:h-auto xl:w-auto xl:flex-wrap xl:flex-shrink xl:block xl:flex-1"
       >
         <div
-          class="h-full xl:h-auto flex-shrink-0 xl:h-screen flex flex-col w-screen xl:w-auto items-center justify-center bg-gray-900 relative"
+          class="h-full flex-shrink-0 xl:h-screen flex flex-col w-screen xl:w-auto items-center justify-center bg-gray-900 relative"
         >
           <ProjectContent :project="start" :count="projects.length" />
         </div>
         <div
-          class="xl:h-screen flex xl:flex-col h-full xl:h-auto flex-shrink-0 xl:flex-shrink w-screen xl:w-auto xl:items-center xl:justify-center bg-gray-900 relative"
+          class="xl:h-screen flex xl:flex-col h-full flex-shrink-0 xl:flex-shrink w-screen xl:w-auto xl:items-center xl:justify-center bg-gray-900 relative"
           v-for="(project, i) in projects"
           :key="`left-${project.slug}`"
         >
@@ -253,6 +253,12 @@ export default {
 <style>
 body {
   overscroll-behavior-y: none;
+}
+
+@supports (-webkit-touch-callout: none) {
+  #scroll-container.h-screen {
+    max-height: -webkit-fill-available;
+  }
 }
 
 .column > div {
