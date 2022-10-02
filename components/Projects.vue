@@ -67,6 +67,11 @@
             :id="project.youtube"
             :index="i + 1"
           />
+          <ImageBlock
+            v-if="i % 2 === 0 && project.image"
+            :url="project.image"
+            :index="i + 1"
+          />
           <ProjectContent
             v-if="i % 2 === 1"
             :project="project"
@@ -102,6 +107,11 @@
             <Youtube
               v-if="i % 2 === 1 && project.youtube"
               :id="project.youtube"
+              :index="i + 1"
+            />
+            <ImageBlock
+              v-if="i % 2 === 1 && project.image"
+              :url="project.image"
               :index="i + 1"
             />
             <ProjectContent
