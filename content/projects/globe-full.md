@@ -1,7 +1,7 @@
 ---
 title: Network Globe Full
 tagline: blender 3d | animation | network | globe
-categories: start, animations 
+categories: animations
 video: globe-full.mp4
 ---
 

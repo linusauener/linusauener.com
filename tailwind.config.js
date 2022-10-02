@@ -1,3 +1,5 @@
+const iOSHeight = require('@rvxlab/tailwind-plugin-ios-full-height');
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
@@ -22,11 +24,14 @@ module.exports = {
         'fadeout': 'fadeout 0.1s ease-in-out'
       }
     }
+
   },
   variants: {
     extend: {
       animation: ['responsive', 'motion-safe', 'motion-reduce', 'hover']
     }
   },
-  plugins: []
+  plugins: [
+    iOSHeight
+  ]
 }

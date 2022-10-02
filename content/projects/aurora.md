@@ -1,7 +1,7 @@
 ---
 title: Aurora
 video: norsken-berg-cropped.mp4
-categories: start, realistic
+categories: realistic
 ---
 
 ## What?

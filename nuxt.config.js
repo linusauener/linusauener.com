@@ -1,35 +1,46 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: "static",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'linusnoam.com',
+    title: "linusnoam.com",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en"
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "" },
+      { name: "format-detection", content: "telephone=no" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', crossorigin: true, href: 'https://fonts.gstatic.com' },
-      { rel: 'stylesheet', crossorigin: true, href: 'https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap' },
-      { rel: 'stylesheet', crossorigin: true, href: 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap' }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      {
+        rel: "preconnect",
+        crossorigin: true,
+        href: "https://fonts.gstatic.com"
+      },
+      {
+        rel: "stylesheet",
+        crossorigin: true,
+        href:
+          "https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+      },
+      {
+        rel: "stylesheet",
+        crossorigin: true,
+        href: "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: ["node_modules/lite-youtube-embed/src/lite-yt-embed.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: ["@/plugins/youtube.client.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -37,33 +48,32 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
-    ['@nuxtjs/fontawesome', {
-      component: 'fa',
-      suffix: true,
-      icons: {
-        solid: [
-          'faChevronDown', 
-          'faChevronUp', 
-          'faChevronLeft', 
-          'faChevronRight', 
-          'faBars',
-          'faPlayCircle',
-          'faTimes'
-        ]
+    "@nuxtjs/tailwindcss",
+    [
+      "@nuxtjs/fontawesome",
+      {
+        component: "fa",
+        suffix: true,
+        icons: {
+          solid: [
+            "faChevronDown",
+            "faChevronUp",
+            "faChevronLeft",
+            "faChevronRight",
+            "faBars",
+            "faPlayCircle",
+            "faTimes"
+          ]
+        }
       }
-    }]
+    ]
   ],
 
-  modules: [
-    '@nuxt/content'
-  ],
+  modules: ["@nuxt/content"],
   content: {
     // Options
   },
 
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
-}
+  build: {}
+};
