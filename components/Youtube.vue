@@ -26,3 +26,9 @@ export default {
   fetchOnServer: false
 };
 </script>
+
+<style>
+lite-youtube {
+  max-width: 90%;
+}
+</style>

@@ -8,7 +8,7 @@
     </div>
     <div
       v-on:click="scrollRight()"
-      v-if="!scrolledToBottom && scrollRightIndex + 1 < scrollRightCount"
+      v-if="!scrolledToRight && scrollRightIndex + 1 < scrollRightCount"
       class="xl:hidden -rotate-90 transform flex navigation cursor-pointer bottom-5 right-5 fixed z-50 text-green-400 xl:text-3xl text-xl xl:w-14 xl:h-14 w-10 h-10 bg-gray-900 justify-center items-center rounded-lg"
     >
       <fa-icon
@@ -18,7 +18,7 @@
     </div>
     <div
       v-on:click="scrollLeft()"
-      v-if="!scrolledToBottom && scrollRightIndex + 1 === scrollRightCount"
+      v-if="scrolledToRight || scrollRightIndex + 1 === scrollRightCount"
       class="xl:hidden flex navigation cursor-pointer bottom-5 right-5 fixed z-50 text-green-400 xl:text-3xl text-xl xl:w-14 xl:h-14 w-10 h-10 bg-gray-900 justify-center items-center rounded-lg"
     >
       <fa-icon :icon="['fas', 'chevron-left']" />
@@ -138,10 +138,20 @@ export default {
           window.innerHeight ===
         document.documentElement.offsetHeight;
 
+      let rightOfWindow =
+        document.getElementById("scroll-container").scrollLeft / 2 ===
+        document.getElementById("scroll-container").offsetWidth;
+
       if (bottomOfWindow) {
         this.scrolledToBottom = true;
       } else {
         this.scrolledToBottom = false;
+      }
+
+      if (rightOfWindow) {
+        this.scrolledToRight = true;
+      } else {
+        this.scrolledToRight = false;
       }
     },
     menu() {
@@ -205,6 +215,19 @@ export default {
         this.ticking = true;
       }
     });
+
+    document
+      .getElementById("scroll-container")
+      .addEventListener("scroll", () => {
+        if (!this.ticking) {
+          window.requestAnimationFrame(() => {
+            this.onScroll();
+            this.ticking = false;
+          });
+
+          this.ticking = true;
+        }
+      });
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.onScroll);
@@ -220,7 +243,8 @@ export default {
       scrollDownCount: 0,
       scrollDownIndex: 0,
       scrolled: false,
-      scrolledToBottom: false
+      scrolledToBottom: false,
+      scrolledToRight: false
     };
   }
 };
