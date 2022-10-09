@@ -24,6 +24,6 @@
 
 <script>
 export default {
-  props: ["url", "noCover"]
+  props: ["url", "noCover", "index"]
 };
 </script>

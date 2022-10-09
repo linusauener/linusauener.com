@@ -8,7 +8,7 @@
     </div>
     <div
       v-on:click="scrollRight()"
-      v-if="!scrolledToRight && scrollRightIndex + 1 < scrollRightCount"
+      v-if="!scrolledToRight && scrollRightIndex < scrollRightCount"
       class="xl:hidden -rotate-90 transform flex navigation cursor-pointer bottom-5 right-5 fixed z-50 text-green-400 xl:text-3xl text-xl xl:w-14 xl:h-14 w-10 h-10 bg-gray-900 justify-center items-center rounded-lg"
     >
       <fa-icon
@@ -18,7 +18,7 @@
     </div>
     <div
       v-on:click="scrollLeft()"
-      v-if="scrolledToRight || scrollRightIndex + 1 === scrollRightCount"
+      v-if="scrolledToRight || scrollRightIndex === scrollRightCount"
       class="xl:hidden flex navigation cursor-pointer bottom-5 right-5 fixed z-50 text-green-400 xl:text-3xl text-xl xl:w-14 xl:h-14 w-10 h-10 bg-gray-900 justify-center items-center rounded-lg"
     >
       <fa-icon :icon="['fas', 'chevron-left']" />
@@ -149,7 +149,8 @@ export default {
         document.documentElement.offsetHeight;
 
       let rightOfWindow =
-        document.getElementById("scroll-container").scrollLeft / 2 ===
+        document.getElementById("scroll-container").scrollLeft /
+          (this.scrollRightCount - 1) ===
         document.getElementById("scroll-container").offsetWidth;
 
       if (bottomOfWindow) {
@@ -192,6 +193,7 @@ export default {
         left: this.scrollRightIndex * window.innerWidth,
         behavior: "smooth"
       });
+      console.log(this.scrollRightIndex, this.scrollRightCount);
     },
     scrollLeft() {
       this.scrollRightIndex = 0;
@@ -212,6 +214,8 @@ export default {
     this.scrollRightIndex = Math.floor(
       document.getElementById("scroll-container").scrollLeft / window.innerWidth
     );
+
+    console.log(this.scrollRightIndex, this.scrollRightCount);
     this.scrollDownCount = Math.ceil(documentHeight / window.innerHeight);
     this.scrollDownIndex = Math.floor(window.pageYOffset / window.innerHeight);
     this.onScroll();
