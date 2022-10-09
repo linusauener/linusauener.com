@@ -1,6 +1,7 @@
 ---
 title: JingJang Chair
 categories: modeling, sketches
-video: norsken-berg-cropped.mp4
+image: pall.png
 ---
 
+A simple chair sketch for a school project. Looks way better in Blender than in real life.
