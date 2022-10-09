@@ -92,7 +92,11 @@
           >
             <Video v-if="start.video" :url="start.video" :index="0" />
             <Youtube v-if="start.youtube" :id="start.youtube" :index="0" />
-            <ImageBlock v-if="start.image" :url="start.image" :noCover="true" />
+            <ImageBlock
+              v-if="start.image"
+              :url="start.image"
+              :noCover="!cover"
+            />
           </div>
           <div
             class="xl:h-screen flex flex-col w-screen xl:w-auto items-center justify-center h-full bg-gray-900 relative"
@@ -129,7 +133,7 @@
 
 <script>
 export default {
-  props: ["start", "projects", "categories"],
+  props: ["start", "projects", "categories", "cover"],
   methods: {
     onScroll() {
       const newOffset = -1 * (this.initOffset - window.scrollY);
@@ -215,7 +219,6 @@ export default {
       document.getElementById("scroll-container").scrollLeft / window.innerWidth
     );
 
-    console.log(this.scrollRightIndex, this.scrollRightCount);
     this.scrollDownCount = Math.ceil(documentHeight / window.innerHeight);
     this.scrollDownIndex = Math.floor(window.pageYOffset / window.innerHeight);
     this.onScroll();

@@ -1,7 +1,7 @@
 ---
 title: Modeling
 description: A bunch of modeling experiments for work, school and fun
-video: pall.png
+image: smoking-hole.jpg
 ---
 
 Models of everything from everywhere.

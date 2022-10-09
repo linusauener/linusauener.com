@@ -1,5 +1,10 @@
 <template>
-  <Projects :start="start" :projects="projects" :categories="categories" />
+  <Projects
+    :start="start"
+    :projects="projects"
+    :categories="categories"
+    :cover="false"
+  />
 </template>
 
 <script>
