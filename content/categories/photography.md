@@ -1,5 +1,6 @@
 ---
 title: Photography
+tagline:  dslr | Adobe Lightroom | Sony a6000
 description: A collection of pictures taken with a dslr camera.
 image: photo_vin.jpg
 ---
