@@ -1,6 +1,6 @@
 ---
 title: Floating swim goggles
-categories: photohraphy
+categories: photography
 image: photo_goggles.jpg
 ---
 
