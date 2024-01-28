@@ -1,6 +1,6 @@
 ---
 title: Fish
-categories: photography, start
+categories: photography
 image: photo_fish.jpg
 ---
 
