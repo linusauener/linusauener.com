@@ -1,6 +1,6 @@
 ---
 title: Raptor Kitchen
-youtube: DJ5ZW7R5I3I
+image: render_raptor.png
 categories: start, film-and-tv
 ---
 
