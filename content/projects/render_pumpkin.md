@@ -1,7 +1,7 @@
 ---
 title: Halloween pumpkin
 tagline:  Blender 3d | Halloween | render
-categories: start
+categories:
 image: render_pumpkin.jpg
 ---
 
