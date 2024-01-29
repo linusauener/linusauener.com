@@ -1,7 +1,7 @@
 ---
-title: 
-description: Some scenes, animations and renders from my recent movies and TV schedule
+title: 3d Art
+description: My best scenes and images created in blender 3d
 youtube: DJ5ZW7R5I3I
 ---
 
-Movie and TV inspired animations and models, combining my two most favorite subjects.
+A wide variety of digital art made mostly in Blender 3d. 
