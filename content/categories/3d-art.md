@@ -1,7 +1,7 @@
 ---
 title: 3d Art
 description: My best scenes and images created in blender 3d
-youtube: DJ5ZW7R5I3I
+image: render_cave
 ---
 
-A wide variety of digital art made mostly in Blender 3d. 
+A wide variety of digital art made mostly in Blender 3d. The image on display is a 3d render of a half submerged cave inspired by the pirates of the caribbean movies.
