@@ -1,6 +1,6 @@
 ---
 title: Digital art
-image: dart_icebear
+image: dart_icebear.jpg
 tagline: Digital Art | Photoshop | Illustrator
 description: Digital art created in a variety of programs like Photoshop or Illustrator
 ---
