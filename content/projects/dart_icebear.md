@@ -1,8 +1,9 @@
 ---
-title: Birthday Visit
-tagline: Stop Motion | Horror
-youtube: fkKWCHNRbfo
-categories: animations
+title: Sinking Ice Bears
+tagline: Photoshop | Global warming
+image: dart_icebear.jpg
+categories: digital-art
 ---
 
-A short stop motion horror video made by me and some friends using Stop Motion Studio Pro app for mac, Canon EOS 700D and the 3d software Blender. House exteriour scenes also use some 3d models from mecabricks.
+A picture of two ice bears on a sinking piece of ice with factories spewing out smoke in the backround.
+This image was made as a reminder of the effect we have on our planet. It was also part of a local campain were designs with enviromentally friendly messeges were put on electrical cabinets as decoration to make them less bland.
